@@ -13,8 +13,8 @@ jobs:
           name: Build Project
           command: dotnet build firstapp/firstapp.csproj --configuration Release
       - run:
-          name: Run Tests
-          command: dotnet test firstapp/firstapp.csproj
+          name: Run Application
+          command: dotnet run --project firstapp/firstapp.csproj
 
 workflows:
   version: 2
