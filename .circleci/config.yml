@@ -8,13 +8,13 @@ jobs:
       - checkout
       - run:
           name: Restore Dependencies
-          command: dotnet restore
+          command: dotnet restore firstapp/firstapp.csproj
       - run:
           name: Build Project
-          command: dotnet build --configuration Release
+          command: dotnet build firstapp/firstapp.csproj --configuration Release
       - run:
           name: Run Tests
-          command: dotnet test
+          command: dotnet test firstapp/firstapp.csproj
 
 workflows:
   version: 2
